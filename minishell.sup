@@ -1,0 +1,210 @@
+{
+   add_history
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:add_history
+   ...
+}
+{
+   readline
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:readline
+   ...
+}
+{
+   fork
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:fork
+   ...
+}
+{
+   libSystem_atfork_child
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:libSystem_atfork_child
+   ...
+}
+{
+   xpc_atfork_child
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:xpc_atfork_child
+   ...
+}
+{
+   __si_module_static_search_block_invoke
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:__si_module_static_search_block_invoke
+   ...
+}
+{
+   _os_trace_calloc
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:_os_trace_calloc
+   ...
+}
+{
+   calloc
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:calloc
+   ...
+}
+{
+   _os_activity_create_addr
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:_os_activity_create_addr
+   ...
+}
+{
+   weak_resize
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:weak_resize
+   ...
+}
+
+{
+   LI_ils_create
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:LI_ils_create
+   ...
+}
+{
+   _extract_user_dict
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:_extract_user_dict
+   ...
+}
+{
+   _extract_user
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:_extract_user
+   ...
+}
+{
+   _ds_item
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:_ds_item
+   ...
+}
+{
+   ds_user_byuid
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:ds_user_byuid
+   ...
+}
+{
+   si_user_byuid
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:si_user_byuid
+   ...
+}
+{
+   search_item_bynumber
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:search_item_bynumber
+   ...
+}
+{
+   search_user_byuid
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:search_user_byuid
+   ...
+}
+{
+   getpwuid_r
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:getpwuid_r
+   ...
+}
+{
+   el_beep
+   Memcheck:Leak
+   match-leak-kinds: all
+   ...
+   fun:el_beep
+   ...
+}
+{
+	leak libSystem
+	Memcheck:Leak
+	...
+	fun:libSystem
+}
+{
+	leak libSystem_atfork_child
+	Memcheck:Leak
+	...
+	fun:libSystem_atfork_child
+}
+{
+	leak xpc_atfork_child
+	Memcheck:Leak
+	...
+	fun:xpc_atfork_child
+}
+{
+	leak /usr/lib/libncurses.5.4.dylib
+	Memcheck:Leak
+	...
+	obj:/usr/lib/libncurses.5.4.dylib
+}
+{
+	leak /usr/lib/system/libsystem_info.dylib
+	Memcheck:Leak
+	...
+	obj:/usr/lib/system/libsystem_info.dylib
+}
+{
+	leak /usr/lib/system/libsystem_c.dylib
+	Memcheck:Leak
+	...
+	obj:/usr/lib/system/libsystem_c.dylib
+}
+{
+	leak /usr/lib/libobjc.A.dylib
+	Memcheck:Leak
+	...
+	obj:/usr/lib/libobjc.A.dylib
+}
+{
+	leak /bin/*
+	Memcheck:Leak
+	...
+	obj:/bin/*
+}
+
