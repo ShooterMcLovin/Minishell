@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   redir2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alpicard <alpicard@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: alpicard <alpicard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 12:45:24 by siroulea          #+#    #+#             */
-/*   Updated: 2024/01/25 15:52:02 by alpicard         ###   ########.fr       */
+/*   Updated: 2025/05/04 10:55:39 by alpicard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	child_redir_to(t_token *token)
 {
-	t_mini	*mini;
+	// t_mini	*mini;
 
-	mini = get_data();
+	// mini = get_data();
 	redir(token);
 }
 

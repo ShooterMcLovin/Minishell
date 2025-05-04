@@ -6,7 +6,7 @@
 /*   By: alpicard <alpicard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 14:09:24 by siroulea          #+#    #+#             */
-/*   Updated: 2025/04/28 19:45:15 by alpicard         ###   ########.fr       */
+/*   Updated: 2025/05/04 10:57:09 by alpicard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,11 @@ void	do_child_stuff(t_token *token)
 
 void	continue_exec(t_token *token)
 {
-	t_token	*temp;
-
 	if (token->next && token->next->type == REDIR_OUT)
 		exec_and_stuff(token->next);
 	if (token->next && token->next->next && (token->type == REDIR_IN
 			|| token->type == REDIR_DBL))
 	{
-		temp = token;
 		while (token->type == REDIR_IN && token->next)
 		{
 			token = token->next;

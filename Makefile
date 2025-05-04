@@ -75,6 +75,7 @@ INC		=	include/minishell.h
 all: $(NAME) 
 	@echo "$(Y)MINISHELL READY$(RT)"
 	$(HIDE)stty -echoctl
+	./minishell
 # Generates output file
 $(NAME): $(OBJS)
 	$(HIDE)$(MAKE) -C libft
