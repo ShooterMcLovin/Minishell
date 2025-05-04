@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alpicard <alpicard@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: alpicard <alpicard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 07:01:40 by alpicard          #+#    #+#             */
-/*   Updated: 2024/01/25 17:53:50 by alpicard         ###   ########.fr       */
+/*   Updated: 2025/04/28 20:03:46 by alpicard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void	run_minishell(t_mini *mini)
 	t_token	*token;
 
 	token = mini->tokens;
+	
 	init_signals(CHILD);
 	exec_and_stuff(token);
 	free_tokens(mini->tokens);
@@ -76,9 +77,10 @@ int	main(int ac, char **av, char **env)
 	{
 		init_signals(INTERACTIVE);
 		mini->input = get_prompt(PROMPT);
-		if (!is_empty(mini->input))
+		if (!is_empty(mini->input) && mini->input != NULL)
 		{
 			parsing = ft_parse(mini);
+			
 			if (parsing < 0)
 				return (parsing_fail(parsing, mini));
 			else if (parsing > 0)

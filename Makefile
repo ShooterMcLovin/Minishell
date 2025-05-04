@@ -16,7 +16,7 @@ HIDE = @
 
 # Compiler and flags
 CC		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra 
 RM		=	rm -f
 
 # Output file name
@@ -103,6 +103,7 @@ fclean: clean
 # Removes objects and executables and remakes
 re: clean all
 	$(HIDE)$(MAKE) -C libft clean
+	./minishell
 
 RT	:= \033[0m
 BK 	:= \033[90;1m

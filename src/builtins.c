@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   builtins.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alpicard <alpicard@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: alpicard <alpicard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 08:34:53 by alpicard          #+#    #+#             */
-/*   Updated: 2024/01/25 00:08:47 by alpicard         ###   ########.fr       */
+/*   Updated: 2025/04/28 19:43:49 by alpicard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int	ft_echo(t_token *token)
 	i = 1;
 	n_option = -1;
 	j = 1;
+
 	if (!token->cmd[1] || token->cmd[1] == NULL)
 		return (write(1, "\n", 1));
 	while (token->cmd[i] && !ft_strncmp(token->cmd[i], "-n", 2)

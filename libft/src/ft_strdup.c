@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alpicard <alpicard@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: alpicard <alpicard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 07:23:52 by alpicard          #+#    #+#             */
-/*   Updated: 2024/01/25 23:20:06 by alpicard         ###   ########.fr       */
+/*   Updated: 2025/04/28 20:59:59 by alpicard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	int		i;
 	char	*str;
 
-	if (!s1)
+	if (!s1 || s1 == NULL)
 		return (NULL);
 	str = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
 	i = 0;

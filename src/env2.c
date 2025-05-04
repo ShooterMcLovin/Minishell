@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   env2.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alpicard <alpicard@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: alpicard <alpicard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:37:02 by siroulea          #+#    #+#             */
-/*   Updated: 2024/01/25 21:21:36 by alpicard         ###   ########.fr       */
+/*   Updated: 2025/05/04 09:47:41 by alpicard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,5 @@ char	*get_env_part(t_mini *mini, char *part)
 			return (head->env_val);
 		head = head->next;
 	}
-	return ((NULL));
+	return ("");
 }

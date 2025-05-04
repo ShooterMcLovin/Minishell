@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alpicard <alpicard@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: alpicard <alpicard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:59:47 by alpicard          #+#    #+#             */
-/*   Updated: 2024/01/24 12:28:53 by alpicard         ###   ########.fr       */
+/*   Updated: 2025/04/28 20:55:55 by alpicard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,16 @@ int	ft_parse(t_mini *mini)
 	mini->cmds = mini_split(mini->input);
 	if (!mini->cmds || mini->cmds == NULL)
 		return (0);
+	
 	mini->new_cmds = parse_mini_cmds();
+	
 	if (!check_input(mini))
 		return (0);
 	releaser(mini->cmds);
 	if (!tokeniser(mini))
 		return (0);
 	releaser(mini->new_cmds);
+	
 	if (!ft_strncmp(mini->tokens->cmd[0], "exit", 5))
 		return (ft_exit(mini->tokens->cmd));
 	return (1);

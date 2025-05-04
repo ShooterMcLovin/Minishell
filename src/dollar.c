@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dollar.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alpicard <alpicard@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: alpicard <alpicard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 14:04:07 by alpicard          #+#    #+#             */
-/*   Updated: 2024/01/23 13:36:52 by alpicard         ###   ########.fr       */
+/*   Updated: 2025/05/04 09:45:36 by alpicard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ char	*dollar_sign(char *mini_cmd)
 	len = dollar_len(mini_cmd);
 	free(pre_dollar);
 	free(get_dollar);
-	if (dollar_sign[0] && mini_cmd[len])
+	if (dollar_sign && dollar_sign[0] && mini_cmd[len])
 	{
 		temp = ft_strjoin(dollar_sign, &mini_cmd[len - 1]);
 		free(dollar_sign);

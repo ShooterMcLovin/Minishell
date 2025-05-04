@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exec2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alpicard <alpicard@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: alpicard <alpicard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 14:09:24 by siroulea          #+#    #+#             */
-/*   Updated: 2024/01/25 16:52:22 by alpicard         ###   ########.fr       */
+/*   Updated: 2025/04/28 19:45:15 by alpicard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,10 @@ void	exec_and_stuff(t_token *token)
 {
 	pid_t	pid;
 	t_mini	*mini;
-
+	
 	mini = get_data();
 	update_error(mini);
+	
 	if (token == NULL)
 		return ;
 	if (!ft_builtins(token))
