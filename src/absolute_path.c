@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   absolute_path.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alpicard <alpicard@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: alpicard <alpicard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 08:17:36 by alpicard          #+#    #+#             */
-/*   Updated: 2024/01/25 15:43:45 by alpicard         ###   ########.fr       */
+/*   Updated: 2025/05/04 16:30:42 by alpicard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,23 @@ char	**build_cmd(t_token *token)
 
 	cmd_no = 0;
 	temp = ft_split(token->cmd[0], '/');
-	if (!temp[0])
+	if (!temp || !temp[0])
 	{
 		releaser(temp);
 		return (NULL);
 	}
 	while (temp[cmd_no])
 		cmd_no++;
-	s_cmd = ft_calloc(3, sizeof(char *));
+	s_cmd = ft_calloc(10, sizeof(char *));
 	if (!s_cmd)
 		return (NULL);
 	s_cmd[0] = ft_strdup(temp[cmd_no - 1]);
-	if (token->cmd[1])
-		s_cmd[1] = ft_strdup(token->cmd[1]);
+	int no_cmds = 1;
+	while (token->cmd[no_cmds]){
+		if (token->cmd[no_cmds])
+			s_cmd[no_cmds] = ft_strdup(token->cmd[no_cmds]);
+		no_cmds++;
+	}
 	releaser(temp);
 	return (s_cmd);
 }
